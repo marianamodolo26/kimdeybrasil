@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0e0e0e;
+    color: #fff;
+}
+
+/* Banner */
+.banner img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* Layout principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem 5%;
+}
+
+/* Colunas */
+.perfil, .curiosidades {
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    padding: 1.5rem;
+    flex: 1;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.perfil h2 {
+    color: #d84ef8;
+    border-bottom: 2px solid #d84ef8;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.curiosidades h2 {
+    color: #8566ff;
+    border-bottom: 2px solid #8566ff;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Scroll apenas nas curiosidades */
+.curiosidades .scroll {
+    max-height: 350px;
+    overflow-y: auto;
+    padding-right: 10px;
+    scroll-behavior: smooth;
+}
+
+/* Estilo da barra de rolagem */
+.curiosidades .scroll::-webkit-scrollbar {
+    width: 8px;
+}
+.curiosidades .scroll::-webkit-scrollbar-thumb {
+    background-color: #8566ff;
+    border-radius: 10px;
+}
+.curiosidades .scroll::-webkit-scrollbar-track {
+    background: #222;
+}
+
+/* Texto */
+ul {
+    list-style: none;
+    line-height: 1.8;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .perfil, .curiosidades {
+        width: 100%;
+    }
+
+    .curiosidades .scroll {
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    .perfil h2, .curiosidades h2 {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+    ul, p {
+        font-size: 0.95rem;
+    }
+}
+
+.botoes-finais {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 3rem 0;
+}
+
+.botao-voltar {
+  background-color: #d84ef8;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-size: 1.1rem;
+  border: none;
+}
+
+.botao-voltar:hover {
+  background-color: #8566ff;
+  transform: scale(1.05);
+}

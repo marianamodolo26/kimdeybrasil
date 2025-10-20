@@ -1,0 +1,116 @@
+/* ==========================
+   HOME PAGE - KIM DEY BRASIL
+   ========================== */
+
+/* Fundo geral */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Área principal com imagem */
+.home-background {
+  background-color: #000; /* Fundo preto contínuo */
+  background-image: url('siteindexbackgroud.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain; /* Mostra imagem completa */
+  min-height: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+/* Parte preta inferior em degradê */
+.overlay {
+  background: linear-gradient(to top, #000 80%, transparent);
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Conteúdo central */
+.home-content {
+  text-align: center;
+  z-index: 2;
+}
+
+/* Botões */
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.botao {
+  background-color: #d84ef8;
+  color: #fff;
+  padding: 1rem 2.2rem;
+  border-radius: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: #8566ff;
+  transform: scale(1.05);
+}
+
+/* ==========================
+   RESPONSIVIDADE
+   ========================== */
+
+@media (max-width: 1200px) {
+  .home-background {
+    background-size: cover; /* cobre melhor telas menores */
+    background-position: center top;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-background {
+    min-height: 100vh;
+    padding-bottom: 3rem;
+  }
+
+  .botoes {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .botao {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1rem;
+    padding: 0.9rem 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-background {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .botao {
+    width: 90%;
+    font-size: 0.95rem;
+    padding: 0.8rem 1.6rem;
+  }
+}

@@ -1,0 +1,126 @@
+/* ======= PÁGINA MÚSICAS ======= */
+.banner {
+    text-align: center; /* Centraliza o conteúdo dentro do header */
+}
+
+.banner img {
+    display: inline-block; /* Garante que a imagem possa ser centralizada */
+    max-width: 100%; /* Mantém o banner responsivo */
+    height: auto;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container principal */
+.musicas-container {
+    padding: 2rem 5%;
+    text-align: center;
+    background-color: #000;
+    min-height: 100vh;
+}
+
+/* Título */
+.titulo {
+    color: #d84ef8;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+/* ======= TABELA ======= */
+.tabela-musicas {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.tabela-musicas th {
+    background-color: #8566ff;
+    color: #000000;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.tabela-musicas td {
+    padding: 1rem;
+    border-bottom: 1px solid #333;
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+.tabela-musicas tr:last-child td {
+    border-bottom: none;
+}
+
+.tabela-musicas a {
+    color: #d84ef8;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.tabela-musicas a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Linha de ano */
+.ano td {
+    background-color: #111;
+    font-weight: 600;
+    color: #8566ff;
+    text-align: left;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+}
+
+/* ======= RESPONSIVIDADE ======= */
+@media (max-width: 900px) {
+    .tabela-musicas th,
+    .tabela-musicas td {
+        font-size: 0.85rem;
+        padding: 0.7rem;
+    }
+
+    .titulo {
+        font-size: 1.5rem;
+    }
+}
+
+/* ======= BOTÃO FINAL ======= */
+.botoes-finais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 3rem 0;
+}
+
+.botao-voltar {
+    background-color: #d84ef8;
+    color: #000000;
+    padding: 1rem 2rem;
+    border-radius: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-size: 1.1rem;
+    border: none;
+}
+
+.botao-voltar:hover {
+    background-color: #8566ff;
+    transform: scale(1.05);
+}
